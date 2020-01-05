@@ -1,0 +1,6 @@
+.section{
+    padding-top: 2em;
+}
+:host ::ng-deep.mat-paginator .mat-paginator-container{
+    justify-content: center;
+  }

@@ -1,0 +1,16 @@
+<mat-card class="flex-me example-card" >
+    <mat-card-title>{{ event.title }}</mat-card-title>
+    <img
+      class="img-card"
+      mat-card-image
+      src="{{ event.image }}"
+      alt="Photo of a Shiba Inu"
+    />
+    <mat-card-content>
+      <p>{{ event.descripcion }}</p>
+      <p>{{event.location}}</p>
+      <p>{{event.date}} - {{event.start}} / {{event.finish}} </p>
+      <p>{{event.web_site}}</p>
+    
+    </mat-card-content>
+  </mat-card>

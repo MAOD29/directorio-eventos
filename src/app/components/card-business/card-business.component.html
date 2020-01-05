@@ -1,0 +1,16 @@
+<mat-card class="flex-me example-card" >
+    <mat-card-title>{{ business.name }}</mat-card-title>
+    <img
+      class="img-card"
+      mat-card-image
+      src="{{ business.image }}"
+alt={{business.name}}
+    />
+    <mat-card-content>
+      <p>{{ business.descripcion }}</p>
+      <p>{{business.location}}</p>
+      <p>{{business.contac}}</p>
+      <p>Abierto de {{business.start}} a  {{business.finish}} </p>
+      <p>{{business.red_social}}</p>
+    </mat-card-content>
+  </mat-card>

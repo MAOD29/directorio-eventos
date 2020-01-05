@@ -1,14 +1,40 @@
-export interface SpotResponse {
+export interface Response {
     message: string,
     data: DataResponse 
 }
 
 export interface Spot {
+    id:number,
     name: string,
     slug: string,
     description: string,
     image: string,
     location: string
+
+}
+export interface Event {
+    id:number,
+    title: string,
+    slug: string,
+    descripcion: string,
+    location: string,
+    image: string,
+    date: Date,
+    start: Date,
+    finish: Date,
+    web_site: string
+}
+export interface Business{
+    id: number,
+    name: string,
+    slug: string,
+    descripcion: string,
+    image: string,
+    location: string,
+    contac: string,
+    start: Date,
+    finish: Date,
+    red_social: string,
 
 }
 export interface DataResponse{
