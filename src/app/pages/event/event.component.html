@@ -1,16 +1,25 @@
-<div class="section">
-   <app-card-event
-   [data]="event"
-    *ngFor="let event of events">
-    
-   </app-card-event>
+<div *ngIf="!events; else eventos">
+  <mat-progress-spinner
+    class="example-margin"
+    color="primary"
+    mode="indeterminate"
+  >
+  </mat-progress-spinner>
 </div>
 
-<mat-paginator  [length]=length
-[pageSize]=pageSize
-[pageSizeOptions]="[6]"
-[showFirstLastButtons]="true"
-[pageIndex]=currentPage
-(page)="pageEvent = handlerPaginator($event)"
->
-</mat-paginator>
+<ng-template #eventos>
+  <div class="section">
+    <app-card-event [data]="event" *ngFor="let event of events">
+    </app-card-event>
+  </div>
+
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[6]"
+    [showFirstLastButtons]="true"
+    [pageIndex]="currentPage"
+    (page)="pageEvent = handlerPaginator($event)"
+  >
+  </mat-paginator>
+</ng-template>

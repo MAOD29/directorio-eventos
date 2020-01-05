@@ -15,7 +15,8 @@ import { PortadaComponent } from './components/portada/portada.component';
 import { SpotComponent } from './components/spot/spot.component';
 import { CardEventComponent } from './components/card-event/card-event.component';
 import { BusinessComponent } from './pages/business/business.component';
-import { CardBusinessComponent } from './components/card-business/card-business.component'
+import { CardBusinessComponent } from './components/card-business/card-business.component';
+
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CardBusinessComponent } from './components/card-business/card-business.
     SpotComponent,
     CardEventComponent,
     BusinessComponent,
-    CardBusinessComponent
+    CardBusinessComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,23 @@
-
-<div>
-    <app-card-business
+<div *ngIf="!businesses; else negocios">
+  <mat-progress-spinner
+    class="example-margin"
+    color="primary"
+    mode="indeterminate"
+  >
+  </mat-progress-spinner>
+</div>
+<ng-template #negocios>
+  <app-card-business
     [data]="business"
     *ngFor="let business of businesses"
-    ></app-card-business
-        >
-</div>
-<mat-paginator  [length]=length
-[pageSize]=pageSize
-[pageSizeOptions]="[6]"
-[showFirstLastButtons]="true"
-[pageIndex]=currentPage
-(page)="pageEvent = handlerPaginator($event)"
->
-</mat-paginator>
+  ></app-card-business>
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[6]"
+    [showFirstLastButtons]="true"
+    [pageIndex]="currentPage"
+    (page)="pageEvent = handlerPaginator($event)"
+  >
+  </mat-paginator>
+</ng-template>

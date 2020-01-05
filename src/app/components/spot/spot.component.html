@@ -1,13 +1,22 @@
-<mat-card class="flex-me example-card" *ngFor="let s of spots">
-  <mat-card-title>{{ s.name }}</mat-card-title>
-  <img
-    class="img-card"
-    mat-card-image
-    src="{{ s.image }}"
-    alt="Photo of a Shiba Inu"
-  />
-  <mat-card-content>
-    <p>{{ s.description }}</p>
-  </mat-card-content>
-</mat-card>
-
+<div *ngIf="!spots; else destino">
+  <mat-progress-spinner
+    class="example-margin"
+    color="primary"
+    mode="indeterminate"
+  >
+  </mat-progress-spinner>
+</div>
+<ng-template #destino>
+  <mat-card class="flex-me example-card" *ngFor="let s of spots">
+    <mat-card-title>{{ s.name }}</mat-card-title>
+    <img
+      class="img-card"
+      mat-card-image
+      src="{{ s.image }}"
+      alt="Photo of a Shiba Inu"
+    />
+    <mat-card-content>
+      <p>{{ s.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</ng-template>
